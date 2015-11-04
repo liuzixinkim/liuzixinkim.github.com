@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+#div1{width:100px; height:100px; background:#ccc; position:absolute; left:0; top:0;}
+#div2{width:100px; height:100px; background:#f00; position:absolute; right:0; top:0;}
+#div3{width:100px; height:100px; background:blue; position:absolute; left:400px; top:0;}
+</style>
+<script src="Drag.js"></script>
+<script src="LimitDrag.js"></script>
+<script src="FrameDrag.js"></script>
+<script>
+window.onload=function (){
+	new Drag('div1');
+	new LimitDrag('div2');
+	new FrameDrag('div3');
+};
+</script>
+</head>
+
+<body>
+	<div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+</body>
+</html>
