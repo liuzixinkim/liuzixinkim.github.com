@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*清楚默认样式*/
+body, h1, h2, h3, h4, h5, h6, p, ul, li, ol, dl, dt, dd, a, i, b, em, strong, img, input{margin:0; padding:0;}
+b, strong{font-weight:normal;}
+i, em{font-style:normal;}
+li{list-style:none;}
+a{text-decoration:none;}
+input{border:none; background:none; outline:none;}
+textarea{outline:none; resize:none;}
+/*清楚默认样式*/
+
+/*公用*/
+.clearFix:after{ content:''; clear:both; display:block; }
+.clearFix{ zoom:1; }
+.fl{float:left; display:inline;}
+.fr{float:right; display:inline;}
+
+body{ background:#f4f4f4; font-size:14px; color:#333; font-family:/5B8B/4F53;}
+.wrapper{width:1000px; margin:0 auto;  }
+.color10b606{color:#10b606;}
+.wrapper a:hover{color:#f80018; text-decoration:underline;}
+.wrapper .l01 a:hover{color:#f80018; text-decoration:underline;}
+.color333333{color:#333; margin-right:10px;}
+.color10b6060{color:#10b606;  margin-right:10px;}
+/*公用*/

@@ -1,22 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-<style>
-  *{ margin:0; padding:0; }
-  
-  li{list-style:none; width:150px; height:150px; background:#ccc; border:3px solid #eee; float:left; margin:10px; text-align: center; line-height:150px; font-size:30px; }
-  a{ display: block; height:100%; color:#fff;  text-decoration:none;}
-  li:hover{ background:#999;}
-</style>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/common.css">
+
+<!-- 效果js -->
+<script src="js/jquery1.7.1jquery.min.js"></script>
+<script src="js/index.js"></script>
+
 </head>
 <body>
-  <ul>
-    <li><a href="cord.html">选项卡</a></li>
-    <li><a href="drag.html">拖拽</a></li>
-    <li><a href="javascript:;">xxx</a></li>
-    <li><a href="javascript:;">xxx</a></li>
-  </ul>
+    <!-- Swiper -->
+    <div class="swiper-container swiper-container-v">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide page1" data-hash="1">
+                <div id="audio"></div>
+                <div class="btn1"></div>
+                <div class="box">
+                    <h2>About.Me</h2>
+                    <ul id="nav_box" class="clearFix">
+                        <li>
+                            <a class="on" href="javascript:;">首页</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="javascript:;">html/css</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="javascript:;">javascript</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="javascript:;">html5/css3</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="javascript:;">联系我</a>
+                            <span></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="swiper-slide page2" data-hash="2">
+                <div class="exhibition">
+                    <h2>DESIGN HTML</h2>
+                    <h3 >A person can success on any of the things he has unlimited enthusiasm.</h3>
+                    <div class="line"></div>
+                    <ul class="work clearFix" >
+                        <li>
+                            <a href="../HTMLDome/hunsha/hunsha.html">
+                                <img src="images/hunsha.jpg" alt="">
+                            </a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="../HTMLDome/xiaomi/xiaomi.html">
+                                <img src="images/xiaomi.jpg" alt="">
+                            </a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="../HTMLDome/meilishuo/meilishuo.html">
+                                <img src="images/meilishuo.jpg" alt="">
+                            </a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="../HTMLDome/360kan/360kan.html">
+                                <img src="images/360kan.png" alt="">
+                            </a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="../HTMLDome/oppo/index.html">
+                                <img src="images/oppo2.jpg" alt="">
+                            </a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="../HTMLDome/meituan/meituan.html">
+                                <img src="images/meituan2.jpg" alt="">
+                            </a>
+                            <span></span>
+                        </li>
+                    </ul>               
+                </div>
+            </div>
+
+            <div class="swiper-slide page3" data-hash="3">
+                <div class="box">  
+                    <!-- 切换效果 -->
+                    <ul class="demo" id="ul1">
+                        <li class="l2">
+                            <a href="javascript:;">
+                                <img src="images/2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="l1">
+                            <a href="javascript:;">
+                                <img src="images/2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="cur">
+                            <a href="javascript:;">
+                                <img src="images/2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="r1">
+                            <a href="javascript:;">
+                                <img src="images/2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="r2">
+                            <a href="javascript:;">
+                                <img src="images/2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <img src="images/2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <img src="images/2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <img src="images/2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <img src="images/2.jpg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="line"></div>
+                    <div id="left">
+                        <a href="javascript:;">←</a>
+                    </div>
+                    <div id="right">
+                        <a href="javascript:;">→</a>
+                    </div>
+                    <!-- 切换效果 --> 
+                </div>
+                <ul class="text">
+                    <li>熟练使用JavaScript编写运动框架，制作各类网站运动特效</li>
+                    <li>熟练掌握jQuery框架，并对其原理有一定的了解</li>
+                    <li>熟悉各主浏览器的兼容性及优化技术，并解决浏览器的兼容问题</li>
+                    <li>熟悉正则表达式的编写、应用及高级表单验证技术</li>
+                    <li>了解JavaScript模块化，并运用seajs进行模块化开发</li>
+                    <li>熟练掌握面向对象编程思想、MVC编程模式</li>
+                    <li>熟练使用AJAX和jsonp交互技术，对HTTP协议有一定的了解</li>
+                </ul>
+            </div>
+            <div class="swiper-slide page4" data-hash="4">
+                <h2>HTML5/css3</h2>
+                <h3 >A person can success on any of the things he has unlimited enthusiasm.</h3>
+                <div class="box clearFix">
+                    <div class="text">
+                        <p>熟悉移动端布局，支持各种手机、pad的移动设备。</p>
+                        <p>熟悉canvas、svg工具，可以用其制作小的动画效果及简易的小游戏</p>
+                        <p>文字</p>
+                        <p>文字</p>
+                    </div>
+                    <ul class="case clearFix">
+                        <li>
+                            <a href="javascript:;">
+                                <img src="images/pao.jpg" class="front" alt="">
+                                <img src="images/pao.jpg" class="back" alt="">
+                            </a>
+                            <div></div>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <img src="images/pao.jpg" class="front" alt="">
+                                <img src="images/pao.jpg" class="back" alt="">
+                            </a>
+                            <div></div>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <img src="images/pao.jpg" class="front" alt="">
+                                <img src="images/pao.jpg" class="back" alt="">
+                            </a>
+                            <div></div>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <img src="images/pao.jpg" class="front" alt="">
+                                <img src="images/pao.jpg" class="back" alt="">
+                            </a>
+                            <div></div>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <img src="images/pao.jpg" class="front" alt="">
+                                <img src="images/pao.jpg" class="back" alt="">
+                            </a>
+                            <div></div>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <img src="images/pao.jpg" class="front" alt="">
+                                <img src="images/pao.jpg" class="back" alt="">
+                            </a>
+                            <div></div>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="swiper-slide page5" data-hash="5">
+                <div class="photo">
+                    <img src="images/lu.jpg" alt="">
+                </div>
+                <h2>about me</h2>
+                <ul>
+                    <li>
+                        <span>姓名：</span>
+                        <span>刘子欣</span></li>
+                    <li>应聘：高级前端工程师</li>
+                    <li>手机：18510939937</li>
+                    <li>邮箱：18510939937@163.com</li>
+                    <li>QQ：919111051</li>
+                    <li class="my">一个90后，毕业于北京现代职业技术学院，为人吃苦耐劳，品行端正，谦虚好学，同时具有良好的沟通和协调能力，勇于接受即将到来的挑战。</li>
+                </ul>
+            </div>
+        </div>
+        <div class="swiper-pagination swiper-pagination-v"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        
+    </script>
+    
 </body>
 </html>

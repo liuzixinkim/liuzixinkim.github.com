@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*清楚默认样式*/
+h1, h2, h3, h4, h5, h6, p, ul, li, ol, dl, dt, dd, a, i, b, em, strong, img, input, body{margin:0; padding:0;}
+b, strong{font-weight:normal;}
+i, em{font-style:normal;}
+li{list-style:none;}
+a{text-decoration:none;}
+input,textarea{border:none; background:none; outline:none;}
+input, img, select{vertical-align:top;}
+textarea{outline:none; resize:none;}
+img{display:block; border:none; }
+/*清楚默认样式*/
+
+
+/*公用*/
+.clearFix:after{ content:''; clear:both; display:block; }
+.clearFix{ zoom:1; }
+.fl{float:left; display:inline;}
+.fr{float:right; display:inline;}
+
+body{font:12px/1.5 Tahoma,'\5FAE\8F6F\96C5\9ED1','Microsoft Yahei',"hiragino sans gb", Helvetica, Arial, "\5b8b\4f53", 'sans-serif';
+	background:#f2f2f2;
+}
+.ml23{margin-left:23px;}
+.mr22{margin-right:22px;}
+.mb19{margin-bottom:19px;}
+.mt70{margin-top:70px;}
+.mt64{margin-bottom:64px;}
+.pt30{padding-top:30px;}
+
+.colorcf9{color:#cf9;}
+.wrap1349{width:1349px; margin:0 auto;}
+
+/*公用*/

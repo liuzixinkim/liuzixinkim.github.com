@@ -1,0 +1,13 @@
+/*清楚默认样式*/
+h1, h2, h3, h4, h5, h6, p, ul, li, ol, dl, dt, dd, a, i, b, em, strong, img, input, body{margin:0; padding:0;}
+b, strong{font-weight:normal;}
+i, em{font-style:normal;}
+li{list-style:none;}
+a{text-decoration:none;}
+input,textarea{border:none; background:none; outline:none;}
+input, img, select{vertical-align:top;}
+textarea{outline:none; resize:none;}
+img{display:block; border:none; }
+.clearFix:after{ content:''; clear:both; display:block; }
+.clearFix{ zoom:1; }
+/*清楚默认样式*/

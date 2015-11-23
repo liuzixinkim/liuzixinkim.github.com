@@ -1,0 +1,474 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link href="css/index.css" rel="stylesheet" />
+<link href="css/common.css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+<script src="js/jquery-1.7.2.js"></script>
+<script>
+$(function(){
+	$('.topbanner_btn li').mouseover(function(){
+			$('.topbanner_btn li').removeClass('active');
+			$(this).addClass('active');
+			$('.topbanner img').hide();
+			$('.topbanner img').eq($(this).index()).fadeIn();
+	});
+});
+
+</script>
+</head>
+
+<body>
+	<div class="wrap ">
+    	<div class="top">
+            <ul class="topbanner clearFix">
+                <li class="fl">
+                    <a href="javascript:;">
+                        <img class="show" src="images/slider-1.jpg" alt="" />
+                    </a>
+                </li>
+                <li class="fl">
+                    <a href="javascript:;">
+                        <img src="images/slider-2.jpg" alt="" />
+                    </a>
+                </li>
+                <li class="fl">
+                    <a href="javascript:;">
+                        <img src="images/slider-3.jpg" alt="" />
+                    </a>
+                </li>
+                <li class="fl">
+                    <a href="javascript:;">
+                        <img src="images/slider-4.jpg" alt="" />
+                    </a>
+                </li>
+                <li class="fl">
+                    <a href="javascript:;">
+                        <img src="images/slider-5.jpg" alt="" />
+                    </a>
+                </li>
+                <li class="fl">
+                    <a href="javascript:;">
+                        <img src="images/slider-6.jpg" alt="" />
+                    </a>
+                </li>
+                <li class="fl">
+                    <a href="javascript:;">
+                        <img src="images/slider-8.jpg" alt="" />
+                    </a>
+                </li>
+            </ul>
+            <ul class="topbanner_btn clearFix">
+                <li class="fl active"></li>
+                <li class="fl"></li>
+                <li class="fl"></li>
+                <li class="fl"></li>
+                <li class="fl"></li>
+                <li class="fl"></li>
+                <li class="fl"></li>
+            </ul>
+        </div>
+        <h1>天猫</h1>
+        <div class="input clearFix">
+            <input class="text fl" type="text" placeholder="搜索天猫商品/店铺" />
+            <input class="submit fl" type="submit" value="" />
+        </div>
+        <div class="kind">
+        	<ul class="clearFix">
+            	<li class="fl">
+                	<a href="javascript:;">
+                    	<img src="images/icon1.png" alt="" />
+                    	<span>商品类目</span>
+                    </a>
+                    <span class="border"></span>
+                </li>
+                <li class="fl">
+                	<a href="javascript:;">
+                    	<img src="images/icon2.png" alt="" />
+                    	<span>淘宝网</span>
+                    </a>
+                    <span class="border"></span>
+                </li>
+                <li class="fl">
+                	<a href="javascript:;">
+                    	<img src="images/icon3.png" alt="" />
+                    	<span>客户端</span>
+                    </a>
+                    <span class="border"></span>
+                </li>
+                <li class="fl">
+                	<a href="javascript:;">
+                    	<img src="images/icon4.png" alt="" />
+                    	<span>手机充值</span>
+                    </a>
+                    <span class="border"></span>
+                </li>
+                <li class="fl">
+                	<a href="javascript:;">
+                    	<img src="images/icon5.png" alt="" />
+                    	<span>我的淘宝</span>
+                    </a>
+                    <span class="border"></span>
+                </li>
+                <li class="fl">
+                	<a href="javascript:;">
+                    	<img src="images/icon6.png" alt="" />
+                    	<span>购物车</span>
+                    </a>
+                    <span class="border"></span>
+                </li>
+                <li class="fl">
+                	<a href="javascript:;">
+                    	<img src="images/icon7.png" alt="" />
+                    	<span>查物流</span>
+                    </a>
+                    <span class="border"></span>
+                </li>
+                <li class="fl">
+                	<a href="javascript:;">
+                    	<img src="images/icon8.png" alt="" />
+                    	<span>收藏夹</span>
+                    </a>
+                    <span class="border"></span>
+                </li>
+            </ul>
+        	
+        </div>
+    </div>
+    <div class="wrap300">
+    	<div class="look">
+        	<h2>瞄一眼 <span>限时闪购</span></h2>
+            <a class="clearFix" href="javascript:;">
+                <img class="fl" src="images/look.jpg" alt="" />
+                <span class="fl">速点击，手慢无！</span>
+                <span class="fl">剩余 已结束</span>
+                <span class="fl">疯抢价 <b>￥</b> 原价：￥</span>
+                <em>更多></em>
+            </a>
+        </div>
+    </div>
+    
+    <div class="box">
+        <ul class="list clearFix">
+            <li class="fl">
+                <a class="clearFix" href="javascript:;">
+                    <img class="fl" src="images/hot-1.jpg" alt="" />
+                    <dl class="fl">
+                    	<dt>喵鲜生</dt>
+                        <dd>进口食材</dd>
+                        <dd>全场包邮</dd>
+                    </dl>
+                </a>
+            </li>
+            <li class="fl">
+                <a class="clearFix" href="javascript:;">
+                    <img class="fl" src="images/hot-2.jpg" alt="" />
+                    <dl class="fl">
+                    	<dt>1秒变女神</dt>
+                        <dd>天猫女装</dd>
+                        <dd>大牌上新</dd>
+                    </dl>
+                </a>
+            </li>
+            <li class="fl">
+                <a class="clearFix" href="javascript:;">
+                    <img class="fl" src="images/hot-3.gif" alt="" />
+                    <dl class="fl">
+                    	<dt>一周新发现</dt>
+                        <dd>被女神扑倒</dd>
+                    </dl>
+                </a>
+            </li>
+            <li class="fl">
+                <a class="clearFix" href="javascript:;">
+                    <img class="fl" src="images/hot-4.png" alt="" />
+                    <dl class="fl">
+                    	<dt>天猫电器城</dt>
+                        <dd>每日更新</dd>
+                        <dd>无线独享价</dd>
+                    </dl>
+                </a>
+            </li>
+            <li class="fl">
+                <a class="clearFix" href="javascript:;">
+                    <img class="fl" src="images/hot-5.jpg" alt="" />
+                    <dl class="fl">
+                    	<dt>品牌街</dt>
+                        <dd>发现。品牌</dd>
+                        <dd>汇聚国际大牌</dd>
+                    </dl>
+                </a>
+            </li>
+            <li class="fl">
+                <a class="clearFix" href="javascript:;">
+                    <img class="fl" src="images/hot-6.jpg" alt="" />
+                    <dl class="fl">
+                    	<dt>周边游</dt>
+                        <dd>最IN周边游，5</dd>
+                        <dd>折白菜价</dd>
+                    </dl>
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+    
+    <div class="wrap300">
+        <div class=" clearFix b_box">
+            <a class="fl big" href="javascript:;">
+                <img class="bigimg" src="images/item_img_big_1.jpg"/>
+            </a>
+            <div class="fl simg01">
+                <a href="javascript:;">
+                    <img class="simg1" src="images/item_img_sm_1.jpg" alt="" />
+                    <span>春夏新品</span>
+                </a>
+            </div>
+            <div class="fl simg01">
+                <a href="javascript:;">
+                    <img class="simg1" src="images/item_img_sm_1.jpg" alt="" />
+                    <span>春夏新品</span>
+                </a>
+            </div>
+        </div>
+    	<div class="txtbox clearFix">
+        	<a class="fl" href="javascript:;">连衣裙</a>
+        	<a class="fl" href="javascript:;">衬衫</a>
+        	<a class="fl" href="javascript:;">T恤</a>
+        	<a class="fl" href="javascript:;">针织衫</a>
+            <a class="fl" href="javascript:;">卫衣</a>
+        	<a class="fl" href="javascript:;">短外套</a>
+        	<a class="fl" href="javascript:;">雪纺衫</a>
+        	<a class="fl" href="javascript:;">休闲裤</a>
+            <a class="fl" href="javascript:;">牛仔裤</a>
+        </div>
+    </div>
+    <div class="wrap300">
+        <div class=" clearFix b_box">
+            <a class="fl big" href="javascript:;">
+                <img class="bigimg" src="images/item_img_big_2.jpg"/>
+            </a>
+            <div class="fl simg01">
+                <a href="javascript:;">
+                    <img class="simg1" src="images/item_img_sm_3.jpg" alt="" />
+                    <span>衬衫推荐</span>
+                </a>
+            </div>
+            <div class="fl simg01">
+                <a href="javascript:;">
+                    <img class="simg1" src="images/item_img_sm_4.jpg" alt="" />
+                    <span>热卖夹克</span>
+                </a>
+            </div>
+        </div>
+    	<div class="txtbox clearFix">
+        	<a class="fl" href="javascript:;">长袖T恤</a>
+        	<a class="fl" href="javascript:;">长袖衬衫</a>
+        	<a class="fl" href="javascript:;">春夹克</a>
+        	<a class="fl" href="javascript:;">牛仔裤</a>
+            <a class="fl" href="javascript:;">休闲裤</a>
+        	<a class="fl" href="javascript:;">针织衫</a>
+        	<a class="fl" href="javascript:;">风衣</a>
+        </div>
+    </div>
+    <div class="wrap300">
+        <div class=" clearFix b_box">
+            <a class="fl big" href="javascript:;">
+                <img class="bigimg" src="images/05.jpg"/>
+            </a>
+            <div class="fl simg01">
+                <a href="javascript:;">
+                    <img class="simg1" src="images/06.jpg" alt="" />
+                    <span>春夏新品</span>
+                </a>
+            </div>
+            <div class="fl simg01">
+                <a href="javascript:;">
+                    <img class="simg1" src="images/06.jpg" alt="" />
+                    <span>春夏新品</span>
+                </a>
+            </div>
+        </div>
+    	<div class="txtbox clearFix">
+        	<a class="fl" href="javascript:;">连衣裙</a>
+        	<a class="fl" href="javascript:;">衬衫</a>
+        	<a class="fl" href="javascript:;">T恤</a>
+        	<a class="fl" href="javascript:;">针织衫</a>
+            <a class="fl" href="javascript:;">卫衣</a>
+        	<a class="fl" href="javascript:;">短外套</a>
+        	<a class="fl" href="javascript:;">雪纺衫</a>
+        	<a class="fl" href="javascript:;">休闲裤</a>
+            <a class="fl" href="javascript:;">牛仔裤</a>
+        </div>
+    </div>
+    <div class="wrap300">
+        <div class=" clearFix b_box">
+            <a class="fl big" href="javascript:;">
+                <img class="bigimg" src="images/1.jpg"/>
+            </a>
+            <div class="fl simg01">
+                <a href="javascript:;">
+                    <img class="simg1" src="images/03.jpg" alt="" />
+                    <span>春夏新品</span>
+                </a>
+            </div>
+            <div class="fl simg01">
+                <a href="javascript:;">
+                    <img class="simg1" src="images/02.jpg" alt="" />
+                    <span>春夏新品</span>
+                </a>
+            </div>
+        </div>
+    	<div class="txtbox clearFix">
+        	<a class="fl" href="javascript:;">连衣裙</a>
+        	<a class="fl" href="javascript:;">衬衫</a>
+        	<a class="fl" href="javascript:;">T恤</a>
+        	<a class="fl" href="javascript:;">针织衫</a>
+            <a class="fl" href="javascript:;">卫衣</a>
+        	<a class="fl" href="javascript:;">短外套</a>
+        	<a class="fl" href="javascript:;">雪纺衫</a>
+        	<a class="fl" href="javascript:;">休闲裤</a>
+            <a class="fl" href="javascript:;">牛仔裤</a>
+        </div>
+    </div>
+    <div class="wrap300">
+        <div class=" clearFix b_box">
+            <a class="fl big" href="javascript:;">
+                <img class="bigimg" src="images/item_img_big_2.jpg"/>
+            </a>
+            <div class="fl simg01">
+                <a href="javascript:;">
+                    <img class="simg1" src="images/item_img_sm_3.jpg" alt="" />
+                    <span>衬衫推荐</span>
+                </a>
+            </div>
+            <div class="fl simg01">
+                <a href="javascript:;">
+                    <img class="simg1" src="images/item_img_sm_4.jpg" alt="" />
+                    <span>热卖夹克</span>
+                </a>
+            </div>
+        </div>
+    	<div class="txtbox clearFix">
+        	<a class="fl" href="javascript:;">长袖T恤</a>
+        	<a class="fl" href="javascript:;">长袖衬衫</a>
+        	<a class="fl" href="javascript:;">春夹克</a>
+        	<a class="fl" href="javascript:;">牛仔裤</a>
+            <a class="fl" href="javascript:;">休闲裤</a>
+        	<a class="fl" href="javascript:;">针织衫</a>
+        	<a class="fl" href="javascript:;">风衣</a>
+        </div>
+    </div>
+    <div class="wrap300">
+        <div class=" clearFix b_box">
+            <a class="fl big" href="javascript:;">
+                <img class="bigimg" src="images/item_img_big_1.jpg"/>
+            </a>
+            <div class="fl simg01">
+                <a href="javascript:;">
+                    <img class="simg1" src="images/item_img_sm_1.jpg" alt="" />
+                    <span>春夏新品</span>
+                </a>
+            </div>
+            <div class="fl simg01">
+                <a href="javascript:;">
+                    <img class="simg1" src="images/item_img_sm_1.jpg" alt="" />
+                    <span>春夏新品</span>
+                </a>
+            </div>
+        </div>
+    	<div class="txtbox clearFix">
+        	<a class="fl" href="javascript:;">连衣裙</a>
+        	<a class="fl" href="javascript:;">衬衫</a>
+        	<a class="fl" href="javascript:;">T恤</a>
+        	<a class="fl" href="javascript:;">针织衫</a>
+            <a class="fl" href="javascript:;">卫衣</a>
+        	<a class="fl" href="javascript:;">短外套</a>
+        	<a class="fl" href="javascript:;">雪纺衫</a>
+        	<a class="fl" href="javascript:;">休闲裤</a>
+            <a class="fl" href="javascript:;">牛仔裤</a>
+        </div>
+    </div>
+    <div class="wrap300">
+        <div class=" clearFix b_box">
+            <a class="fl big" href="javascript:;">
+                <img class="bigimg" src="images/05.jpg"/>
+            </a>
+            <div class="fl simg01">
+                <a href="javascript:;">
+                    <img class="simg1" src="images/06.jpg" alt="" />
+                    <span>春夏新品</span>
+                </a>
+            </div>
+            <div class="fl simg01">
+                <a href="javascript:;">
+                    <img class="simg1" src="images/06.jpg" alt="" />
+                    <span>春夏新品</span>
+                </a>
+            </div>
+        </div>
+    	<div class="txtbox clearFix">
+        	<a class="fl" href="javascript:;">连衣裙</a>
+        	<a class="fl" href="javascript:;">衬衫</a>
+        	<a class="fl" href="javascript:;">T恤</a>
+        	<a class="fl" href="javascript:;">针织衫</a>
+            <a class="fl" href="javascript:;">卫衣</a>
+        	<a class="fl" href="javascript:;">短外套</a>
+        	<a class="fl" href="javascript:;">雪纺衫</a>
+        	<a class="fl" href="javascript:;">休闲裤</a>
+            <a class="fl" href="javascript:;">牛仔裤</a>
+        </div>
+    </div>
+    
+    <div class="wrap300 bottom">
+    	<img class="bottom" src="images/bottom.jpg" alt="" />
+    </div>
+    <div class="wrap b_txt clearFix">
+    	<a class="fl" href="javascript:;">登录</a>
+        <a class="fl" href="javascript:;">注册</a>
+        <input class="button fr" type="button" value="返回顶部" />
+    </div>
+    <div class="wrap bottom_txt">
+    	<a href="javascript:;">电脑版</a>
+        <p>Copyright ©2014 浙B2-20080224</p>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
