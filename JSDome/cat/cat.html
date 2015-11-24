@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0; padding:0;}
+.clearFix:after{ content:''; clear:both; display:block; }
+.clearFix{ zoom:1; }
+body{width:100%; height:100%; background:url(images/bg.jpg) no-repeat; background-size:cover; overflow:hidden;}
+h2{text-align:center; font-size:20px; width:200px; position:absolute; left:100px; top:100px; box-shadow:1px 1px 5px #333; line-height:40px; line-height:40px;}
+ul{width:550px; height:550px; margin:20px auto;  position:relative;}
+ul li {width:180px; height:180px;  float:left; list-style:none; margin:1px;  }
+li.active{ border:2px dashed #ccc; box-sizing:border-box;}
+img{display:block; height:100%;}
+li span{ height:100%; width:100%; position:absolute; left:0; top:0;   text-align:center; line-height:150px; cursor:pointer; font-size:50px; color:#f00; font-weight:bold;}
+</style>
+<script src="move.js"></script>
+<script>
+ready(function (){
+	function getPos(obj){
+		var left=0;
+		var top=0;
+		while(obj)
+		{
+			left+=obj.offsetLeft;
+			top+=obj.offsetTop;
+			obj=obj.offsetParent;
+		}
+		return {left:left,top:top}
+	}
+
+	var aLi=document.getElementsByTagName('li');
+	var aImg=document.getElementsByTagName('img');
+	var zIndex=1;
+
+	//创建span
+	for(var i=0; i<aLi.length; i++)
+	{
+		var oSpan=document.createElement('span');
+		
+		aImg[i].src='images/'+(i+1)+'.jpg';
+		aLi[i].appendChild(oSpan);
+	}
+	//布局转换
+	var arr=[];
+	for(var i=0; i<aLi.length; i++)
+	{
+		var left=aLi[i].offsetLeft;
+		var top=aLi[i].offsetTop;
+		arr.push({left:left,top:top});
+	}
+	for(var i=0; i<aLi.length; i++)
+	{
+		
+		aLi[i].style.left=arr[i].left+'px';
+		aLi[i].style.top=arr[i].top+'px';
+		aLi[i].style.margin=0;
+		aLi[i].style.position='absolute';
+	}
+	
+	for(var i=0; i<aLi.length; i++)
+	{
+		aLi[i].index=i;
+		drag(aLi[i]);
+	}
+	
+	function drag(obj){
+		obj.onmousedown=function (ev){
+			var oNear=null;
+			var oEvent=ev || event;
+			var disX=oEvent.clientX-obj.offsetLeft;
+			var disY=oEvent.clientY-obj.offsetTop;
+			
+			document.onmousemove=function (ev){
+				var oEvent=ev || event;
+				var left=oEvent.clientX-disX;
+				var top=oEvent.clientY-disY;
+				obj.style.left=left+'px';
+				obj.style.top=top+'px';
+				obj.style.zIndex=zIndex++;
+				//检测碰撞
+				for(var i=0; i<aLi.length; i++)
+				{
+					if(obj != aLi[i])
+					{
+						if(collText(obj,aLi[i]))
+						{
+							oNear=findNear(obj);
+							
+							if(oNear)
+							{	
+								for(var i=0; i<aLi.length; i++)
+								{
+									aLi[i].className='';
+								}
+								oNear.className='active';
+							}
+							else
+							{
+							
+								for(var i=0; i<aLi.length; i++)
+								{
+									aLi[i].className='';
+								}
+							}
+						}
+					}
+					
+				}
+				
+			};
+			document.onmouseup=function (){
+				
+				
+				document.onmousemove=null;
+				document.onmouseup=null;
+				
+				if(oNear)
+				{
+					for(var i=0; i<aLi.length; i++){
+						aLi[i].className='';
+					}
+					
+					move(obj,arr[oNear.index]);
+					move(oNear,arr[obj.index]);
+					var Tmp=oNear.index;
+					oNear.index=obj.index;
+					obj.index=Tmp;
+				}
+				else
+				{
+					move(obj,arr[obj.index]);
+				}
+			};
+		};
+	}
+	document.onmousedown=function (){
+		return false;
+	};
+	
+	
+	function findNear(obj){
+		var nMin=9999;
+		var nMinIndex=-1;
+		for(var i=0; i<aLi.length; i++)
+		{
+			if(obj != aLi[i])
+			{
+				var dis=getDis(obj,aLi[i]);	
+				if(dis < nMin)
+				{
+					nMin=dis;
+					nMinIndex=i;	
+				}
+			}
+		}
+		if(nMinIndex != -1)
+		{
+			
+			return aLi[nMinIndex];
+		}
+		else
+		{
+			return null;
+		}
+		
+	}
+	
+	function getDis(obj1,obj2)
+	{
+		var a=obj1.offsetLeft+obj1.offsetWidth/2-(obj2.offsetLeft+obj2.offsetWidth/2);
+		var b=obj1.offsetTop+obj1.offsetHeight/2-(obj2.offsetTop+obj2.offsetHeight/2);
+		return Math.sqrt(a*a+b*b);
+	}
+	
+	
+	
+	function collText(obj1,obj2){
+		var l1=getPos(obj1).left;
+		var r1=l1+obj1.offsetWidth;
+		var t1=getPos(obj1).top;
+		var b1=t1+obj1.offsetHeight;
+		
+		var l2=getPos(obj2).left;
+		var r2=l2+obj2.offsetWidth;
+		var t2=getPos(obj2).top;
+		var b2=t2+obj2.offsetHeight;
+		
+		if(l2>r1 || t2>b1 || l1>r2 || t1>b2 )
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+		
+});
+
+
+
+
+function ready(fn){
+	if(document.addEventListener)
+	{
+		document.addEventListener('DOMContentLoaded',fn,false);
+	}
+	else
+	{
+		document.attachEvent('onreadystatechange',function (){
+			if(readyState == 'complete')
+			{
+				fn();
+			}
+		});
+	}
+}
+</script>
+</head>
+
+<body>
+	<h2>挑战拼图</h2>
+	<ul class="clearFix">
+    	<li>
+        	<img src="" />
+        </li>
+        <li>
+        	<img src="" />
+        </li>
+        <li>
+        	<img src="" />
+        </li>
+        
+        <li>
+        	<img src="" />
+        </li>
+        <li>
+        	<img src="" />
+        </li>
+        <li>
+        	<img src="" />
+        </li>
+        
+        <li>
+        	<img src="" />
+        </li>
+        <li>
+        	<img src="" />
+        </li>
+        <li>
+        	<img src="" />
+        </li>
+    </ul>
+</body>
+</html>
