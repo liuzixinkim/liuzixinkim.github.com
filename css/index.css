@@ -52,6 +52,7 @@
 #audio{width:77px; height:33px; /*background:url(../images/button2.png) no-repeat;*/ position:absolute; right:5%; top:10%; z-index:9; cursor:pointer; 
     -webkit-transition:.3s all ease;
     -ms-transition:.3s all ease;
+    -moz-transition:.3s all ease;
      }
 .page1 .box{width:660px;height:200px; position:absolute; left:50%; top:50%; margin-top:-100px; margin-left:-330px; text-align:center; 
 }
@@ -63,6 +64,10 @@
     to{width:660px;opacity:1;}
 }
 @-ms-keyframes move{
+    form{width:0px; opacity:0;}
+    to{width:660px;opacity:1;}
+}
+@-moz-keyframes move{
     form{width:0px; opacity:0;}
     to{width:660px;opacity:1;}
 }
