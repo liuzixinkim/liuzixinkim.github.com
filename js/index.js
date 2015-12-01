@@ -36,6 +36,8 @@ window.onload=function(){
 				timer2=setInterval(function (){
 					$('.page2 .work li').eq(iNow).css({
 						WebkitTransform:'translateY(0)',
+						msTransform:'translateY(0)',
+						MozTransform:'translateY(0)',
 						opacity:1
 					});
 					iNow++;
@@ -50,6 +52,8 @@ window.onload=function(){
 		{
 			$('.page2 .work li').css({
 				WebkitTransform:'translateY(100px)',
+				msTransform:'translateY(100px)',
+				MozTransform:'translateY(100px)',
 				opacity:0
 			});
 		}
@@ -124,7 +128,6 @@ window.onload=function(){
 	//左面
 	oLeft.onclick=function(){
 		aClass.unshift(aClass.pop());	
-		
 		tab();
 	};
 	
