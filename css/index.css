@@ -1,5 +1,4 @@
 
-
  html, body {
         position: relative;
         height: 100%;
@@ -16,23 +15,18 @@
     .swiper-container {
         width: 100%;
         height: 100%;
-
     }
     .swiper-slide {
         text-align: center;
         font-size: 18px;
         background: #fff; 
-
     }
     .swiper-container-v {
         background: #eee;
     }
 
-
 /*nav*/
 /*.nav{ z-index:9; width:150px; height:100%; background:#ffc; position:absolute; right:0; top:0;}*/
-
-
 
 
 /*首屏*/
@@ -47,8 +41,14 @@
     display:-ms-box; 
     -ms-box-pack:center;
     -ms-box-align:center;
-
 }
+
+.yezi1{width:50px; height:50px; background:url(../images/yezi1.png) no-repeat; background-size:cover;  position:absolute; left:50%; top:40%;}
+.yezi2{width:30px; height:30px; background:url(../images/yezi1.png) no-repeat; background-size:cover; position:absolute; left:40%; top:20%;}
+.yezi3{width:40px; height:40px; background:url(../images/yezi1.png) no-repeat; background-size:cover; position:absolute; left:30%; top:30%;}
+.hudie1{width:73px; height:73px; background:url(../images/hudie.png) no-repeat; background-size:cover; position:absolute; left:60%; top:50%;}
+
+
 #audio{width:77px; height:33px; /*background:url(../images/button2.png) no-repeat;*/ position:absolute; right:5%; top:10%; z-index:9; cursor:pointer; 
     -webkit-transition:.3s all ease;
     -ms-transition:.3s all ease;

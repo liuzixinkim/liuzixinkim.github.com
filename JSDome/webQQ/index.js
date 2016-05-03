@@ -60,12 +60,12 @@ window.onload=function(){
 					oLoginBox.style.display='none';	
 					oWrap.style.display='block';
 					
-					getUserList(json.token);
-					getAllMsg(json.token);
-					sendMsg(json.token);
-					
+					getUserList(json.token); //获取用户列表
+					getAllMsg(json.token);	//获取聊天信息
+					sendMsg(json.token);	//发送信息
+						
 					setInterval(function(){
-						getNewMsg(json.token);
+						getNewMsg(json.token);	//发送信息后获取新的信息
 					},1000);
 				}
 			}	

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+body{height:1000px;}
+	*{margin:0; padding:0; list-style:none;}
+	#box{width:300px; height:200px; border:1px solid #000; text-align:center;}
+
+	#wrap{width:700px; height:500px;  border:1px solid #ccc;position:absolute; left:50%; top:50%; margin:-250px 0 0 -350px;}
+	#left{position:absolute; left:0; top:0; width:500px; height:100%; background:#FCC;}
+	#top{width:100%; height:350px; position:absolute; left:0; top:0; }
+	#top dl{ padding:10px; padding-bottom:20px; border-top:1px dashed #000;}
+	#bottom{width:100%; height:150px; position:absolute; left:0; bottom:0;}
+	#bottom textarea{width:calc(100% - 2px);}
+	#bottom input{ position:absolute; right:10px; bottom:10px; border:1px solid #000; padding:5px 10px;}
+
+	#right{width:200px; height:100%; position:absolute; right:0; top:0; background:#fff; overflow-y:scroll; }
+	#right ul{}
+	#right li{width:100px; height:30px; overflow:hidden;} 
+</style>
+<script src="jsonp.js"></script>
+<script src="index2.js"></script>
+<script>
+
+</script>
+</head>
+<body>
+	<div id="box">
+		<div class="face">
+			<img src="face/4.jpg" alt="" id="img">
+			<a href="javascript:;" id="btn"> > </a>
+		</div>
+		<div class="msg">
+			<span>用户名:</span><input type="text" id="username"><br>
+	        <span>密 码 : </span><input type="password" id="password"><br>
+			<input type="button" value="注册" id="add_btn">
+	        <input type="button" value="登陆" id="lgn_btn">
+		</div>
+	</div>
+	<div id="wrap" style="display:none;">
+		<div id="left">
+			<div id="top">
+				<!-- <dl>
+					<dd>
+						<strong>名字</strong><em>时间</em>
+					</dd>
+					<dt>内容</dt>
+				</dl> -->
+			</div>
+			<div id="bottom">
+				<textarea name="" id="t1" cols="30" rows="10"></textarea>
+				<input type="button" value="发送" id="btn1">
+			</div>
+		</div>
+		<div id="right">
+			<ul id="ul1">
+				<!-- <li>
+					<img src="face/4.jpg" width="20" alt=""><span>名字</span>
+				</li>
+				<li>
+					<img src="face/4.jpg" width="20" alt=""><span>名字</span>
+				</li> -->
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
