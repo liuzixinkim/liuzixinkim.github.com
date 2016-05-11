@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>表格</title>
+<style>
+body{ font-family:'微软雅黑';}
+	table{  border-collapse:collapse; border-spacing:0; border:1px solid #000; text-align:center;}
+	th{padding:10px 20px; background:#ffc; font-size:16px; border:1px solid #000; cursor:pointer;}
+	td{ border:1px solid #000; padding:5px 0; font-size:14px;}
+	input{ margin-bottom:20px;}
+	input[type=text]{width:200px; font-size:16px; padding:5px 10px;}
+	input[type=button]{ font-size:16px;  padding:5px 10px; cursor:pointer;}
+	dt{ font-size:16px; font-weight:bold;}
+	dd{line-height:30px; font-size:14px;}
+</style>
+<script src="angular.js"></script>
+<script>
+
+	var myApp = angular.module('myApp',[]);
+
+	myApp.controller('User',['$scope','$filter',function ($scope,$filter){
+
+		var oriArr = [
+			{
+				ID : '27001' ,
+				name : '张帅' ,
+				chinese : '85' ,
+				math : '96' ,
+				english : '89' ,
+				political : '70' ,
+				physical : '79' ,
+				geographic : '83' ,
+				history : '82' ,
+				biological : '92' , 
+				chemical : '80'
+			},
+			{
+				ID : '27002' ,
+				name : '刘云' ,
+				chinese : '73' ,
+				math : '95' ,
+				english : '82' ,
+				political : '76' ,
+				physical : '82' ,
+				geographic : '94' ,
+				history : '91' ,
+				biological : '79' , 
+				chemical : '81'
+			},
+			{
+				ID : '27003' ,
+				name : '陈梦' ,
+				chinese : '94' ,
+				math : '84' ,
+				english : '76' ,
+				political : '84' ,
+				physical : '74' ,
+				geographic : '93' ,
+				history : '86' ,
+				biological : '79' , 
+				chemical : '85'
+			},
+			{
+				ID : '27004' ,
+				name : '陈晓双' ,
+				chinese : '84' ,
+				math : '90' ,
+				english : '84' ,
+				political : '90' ,
+				physical : '76' ,
+				geographic : '89' ,
+				history : '72' ,
+				biological : '82' , 
+				chemical : '86'
+			},
+			{
+				ID : '27005' ,
+				name : '魏伟' ,
+				chinese : '68' ,
+				math : '92' ,
+				english : '76' ,
+				political : '81' ,
+				physical : '86' ,
+				geographic : '92' ,
+				history : '79' ,
+				biological : '76' , 
+				chemical : '85'
+			},
+			{
+				ID : '27006' ,
+				name : '杜小白' ,
+				chinese : '96' ,
+				math : '84' ,
+				english : '86' ,
+				political : '81' ,
+				physical : '75' ,
+				geographic : '92' ,
+				history : '76' ,
+				biological : '78' , 
+				chemical : '90'
+			},
+			{
+				ID : '27007' ,
+				name : '张园' ,
+				chinese : '85' ,
+				math : '96' ,
+				english : '94' ,
+				political : '79' ,
+				physical : '85' ,
+				geographic : '91' ,
+				history : '82' ,
+				biological : '72' , 
+				chemical : '90'
+			},
+			{
+				ID : '27008' ,
+				name : '王鹏' ,
+				chinese : '86' ,
+				math : '76' ,
+				english : '99' ,
+				political : '80' ,
+				physical : '92' ,
+				geographic : '73' ,
+				history : '92' ,
+				biological : '72' , 
+				chemical : '90'
+			},
+			{
+				ID : '27009' ,
+				name : '刘楠' ,
+				chinese : '98' ,
+				math : '79' ,
+				english : '89' ,
+				political : '92' ,
+				physical : '89' ,
+				geographic : '93' ,
+				history : '72' ,
+				biological : '82' , 
+				chemical : '80'
+			}
+		];
+
+		$scope.dataList = oriArr;
+
+
+		//排序
+		$scope.fnSort = function (arg){
+
+			arguments.callee['fnSort'+arg] = !arguments.callee['fnSort'+arg];
+
+			$scope.dataList = $filter('orderBy')($scope.dataList,arg,arguments.callee['fnSort'+arg]);
+		};
+
+		//搜索
+		$scope.fnFilter = function (){
+			$scope.dataList = $filter('filter')(oriArr,$scope.filterVal);
+		};
+
+		//求和
+		// $scope.sum = function (){
+		// 	return $scope.dataList.chinese;
+		// }
+
+
+	}]);
+
+</script>
+</head>
+<body ng-controller="User">
+	<h1>angular</h1>
+	<div>
+		<div>
+			<input ng-model="filterVal" type="text">
+			<input ng-click="fnFilter()" type="button" value="搜索">
+		</div>
+		<table >
+			<tr>
+				<th ng-click="fnSort('ID')">学籍编号</th>
+				<th ng-click="fnSort('name')">姓名</th>
+				<th ng-click="fnSort('chinese')">语文</th>
+				<th ng-click="fnSort('math')">数学</th>
+				<th ng-click="fnSort('english')">英语</th>
+				<th ng-click="fnSort('political')">政治</th>
+				<th ng-click="fnSort('physical')">物理</th>
+				<th ng-click="fnSort('geographic')">地理</th>
+				<th ng-click="fnSort('history')">历史</th>
+				<th ng-click="fnSort('biological')">生物</th>
+				<th ng-click="fnSort('chemical')">化学</th>
+				<!-- <th ng-click="">总成绩</th> -->
+			</tr>
+			<tr ng-repeat="data in dataList">
+				<td>{{ data.ID }}</td>
+				<td>{{ data.name }}</td>
+				<td>{{ data.chinese }}</td>
+				<td>{{ data.math }}</td>
+				<td>{{ data.english }}</td>
+				<td>{{ data.political }}</td>
+				<td>{{ data.physical }}</td>
+				<td>{{ data.geographic }}</td>	
+				<td>{{ data.history }}</td>
+				<td>{{ data.biological }}</td>
+				<td>{{ data.chemical }}</td>
+				<!-- <td>{{ sum() }}</td> -->
+			</tr>
+		</table>
+	</div>
+	<div>
+		<dl>
+			<dt>介绍:</dt>
+			<dd>使用AngularJs技术，主要运用指令、过滤器、自定义方法、数据绑定等方法进行开发。</dd>
+			<dd>点击每一项标题有排序的功能、可以顺序、可以倒序。</dd>
+			<dd>可以通过搜索框进行搜索，点击搜索，在表格中进行匹配筛选。</dd>
+		</dl>
+	</div>
+</body>
+</html>

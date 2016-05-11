@@ -2,6 +2,7 @@
  html, body {
         position: relative;
         height: 100%;
+        font-family:'微软雅黑';
 
     }
     body {
@@ -30,7 +31,7 @@
 
 
 /*首屏*/
-.page1{ width:100%; height:100%;
+.page1{ width:100%; height:100%; font-family:'微软雅黑';
     background:url(../images/bg-01.jpg) no-repeat; background-size:100% 100%;
     position:relative; 
 
@@ -94,7 +95,9 @@
 .page1 .btn1:hover{-webkit-transform:rotate(360deg); -moz-transform:rotate(360deg);-ms-transform:rotate(360deg); background:url(../images/top-ico3-hover.png) no-repeat;}
 
 /*二屏*/
-.exhibition{text-align:center; background:url(../images/bf-7.jpg) no-repeat; background-size:100% 100%; height:100%; width:100%;}
+
+
+.exhibition{text-align:center; font-family:'微软雅黑'; background:url(../images/bf-7.jpg) no-repeat; background-size:100% 100%; height:100%; width:100%;}
 .exhibition h2{padding-top:3%; color:#444;}
 .exhibition h3{ font-size:16px; color:#999;  margin-top:10px; margin-bottom:5px;}
 .exhibition .line{ background:url(images/banner_f.png) no-repeat center; width:100%; height:16px;}
@@ -127,7 +130,10 @@
 .exhibition .work li a:hover{-webkit-transform:translateY(-18px); -ms-transform:translateY(-18px); -moz-transform:translateY(-18px);}
 
 /*三屏*/
-.page3{/*background:-webkit-radial-gradient(#b6ccd5,#dee9eb);*/ background:url(../images/bg-8.jpg) no-repeat; background-size:100% 100%;}
+
+.moreList{width:42px; height:42px; position:absolute; z-index:100; right:50px; top:50px; box-shadow:2px 2px 3px #ccc; border-radius:38%; overflow:hidden;}
+.moreList img{width:42px; height:42px;  }
+.page3{/*background:-webkit-radial-gradient(#b6ccd5,#dee9eb);*/  font-family:'微软雅黑'; background:url(../images/bg-8.jpg) no-repeat; background-size:100% 100%;}
 .page3 .box{width:100%;  height:330px; position:relative; }
 .page3 .box .demo{ width:360px; height:245px; position:absolute; left:50%; top:10%; margin-left:-200px;  }
 .page3 .box .demo li{border-radius:5px; overflow:hidden; width:100%; height:100%; position:absolute; left:0; top:0; background:#399; color:#fff; font-size:50px; text-align:center; line-height:300px; font-weight:bold; font-family:微软雅黑; border:1px solid #ccc; opacity:0; box-shadow:0px 5px 10px #bbb; /*-webkit-box-reflect:below 10px -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.2));*/ -webkit-transition:1s all ease;  -webkit-transform:perspective(800px) translateX(0px) rotateY(0deg);
@@ -164,9 +170,9 @@
     -ms-transform:perspective(800px) translateX(280px) ;
      -moz-transform:perspective(800px) translateX(280px) ;
      z-index:1;}
-.page3 .box #left{ position:absolute; left:15%; top:50%;}
+.page3 .box #left{ position:absolute; left:15%; top:50%; border-radius:50%; box-shadow:3px 3px 10px #bbb;}
 .page3 .box #left a{ display:block; width:43px; height:43px;background:url(../images/top-ico3-hover2.png) no-repeat;}
-.page3 .box #right{ position:absolute; right:15%; top:50%;}
+.page3 .box #right{ position:absolute; right:15%; top:50%; border-radius:50%; box-shadow:-3px 3px 10px #bbb;}
 .page3 .box #right a{ display:block; width:43px; height:43px;background:url(../images/top-ico3-hover3.png) no-repeat;}
 .page3 .box .line{width:100%; height:16px; background:url(images/banner_f.png) no-repeat center; position:absolute; left:0; bottom:0;  }
 .page3 .text{margin-top:20px; color:#333; font-size:14px;}
@@ -174,7 +180,7 @@
 
 
 /*四瓶*/
-.page4{/*background:-webkit-radial-gradient(#b6ccd5,#dee9eb);*/ background:url(../images/bg-9.jpg); background-size:100% 100%;}
+.page4{/*background:-webkit-radial-gradient(#b6ccd5,#dee9eb);*/ font-family:'微软雅黑'; background:url(../images/bg-9.jpg); background-size:100% 100%;}
 .page4 h2{padding-top:3%; color:#444;}
 .page4 h3{ font-size:16px; color:#999;  margin-top:10px; margin-bottom:10px;}
 
@@ -222,8 +228,8 @@
 .page4 .box .case li div{ width:100%; height:16px; background:url(images/shadow.png) no-repeat; background-size:cover; position:absolute; left:0; bottom:-15px;}
 
 /*五屏*/
-.page5{background:url(../images/bg-10.jpg); background-size:100% 100%; width:100%; height:100%;}
-.page5 .photo{ width:150px; height:150px; position: absolute; left:25%; top:30%; }
+.page5{background:url(../images/bg-10.jpg); font-family:'微软雅黑'; background-size:100% 100%; width:100%; height:100%;}
+.page5 .photo{ width:160px; box-shadow:2px 2px 3px #000;  position: absolute; left:25%; top:30%; border-radius:6%; overflow:hidden; }
 .page5 .photo img{ display:block; width:100%; height:100%;}
 .page5 h2{ margin-top:70px; margin-bottom:40px; color:#444;}
 .page5 ul{width:400px;  height:400px;  padding-left:270px;   margin:0 auto;}
